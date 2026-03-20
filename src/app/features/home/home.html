@@ -1,0 +1,36 @@
+<app-home-sidebar />
+
+<div>
+    <app-header />
+    <div echarts [options]="chartOptions()" class="chart-container"></div>
+
+    @if(!loading()){
+    <div class="card-list">
+        @for (card of cardListFiltered(); track card.id) {
+        <app-home-card [card]="card">
+            <div graph class="chart-wrapper">
+                <div echarts [options]="cardChartOptions()" class="chart-container"></div>
+            </div>
+        </app-home-card>
+        }
+    </div>
+    } @if(loading()) {
+    <app-loader />
+    }
+
+    <div>
+        <div class="main-text">{{ homeMainText() }}</div>
+    </div>
+
+    <!-- @defer () {
+<div class="card-list">
+    @for (card of cardList(); track card.id) {
+    <app-home-card [card]="card" />
+    }
+</div>
+} @loading {
+<app-loader />
+} @placeholder(minimum 10000ms) {
+<app-loader />
+} -->
+</div>

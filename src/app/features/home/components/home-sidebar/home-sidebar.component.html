@@ -1,0 +1,10 @@
+<div class="logo">
+    <img src="/assets/svg/logo/logo.svg" alt="Logo" />
+    <div>Drochilo</div>
+</div>
+
+<div class="tabs">
+    @for (tab of tabs(); track $index) {
+        <app-sidebar-tab [class.active-tab]="activeTabIndex() === $index" [tab]="tab" (click)="changeTab($index)" />
+    }
+</div>

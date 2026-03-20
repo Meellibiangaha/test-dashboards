@@ -1,0 +1,49 @@
+:host {
+    min-width: 720px;
+    max-height: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 8px;
+
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 1px rgba(34, 60, 80, 0.2);
+
+    transition: box-shadow 0.3s;
+    &:hover {
+        box-shadow: 0px 0px 20px 4px rgba(34, 60, 80, 0.3);
+    }
+
+    ::ng-deep .chart-container {
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+
+.name {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+.img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    img {
+        // Контейнер для изображения
+        width: 40px;
+        height: 40px;
+        margin-bottom: 16px;
+        object-fit: contain; // Для иконок лучше contain, чтобы не обрезались
+        display: block;
+    }
+}
+
+.description {
+    overflow: auto;
+    line-height: 1.5;
+}

@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #232323;
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    min-width: 1280px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+/* Для всей страницы */
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    height: 10px; /* высота для горизонтального скролла */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* цвет дорожки */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* цвет ползунка */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* цвет при наведении */
+}

@@ -1,0 +1,33 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* или 100vh для полного экрана */
+    animation: flow 2.4s infinite;
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 360px;
+    }
+}
+
+@keyframes flow {
+    0%,
+    100% {
+        transform: scale(1);
+        // opacity: 0.7;
+    }
+    33% {
+        transform: scale(1.1); // увеличиваем
+        // opacity: 1;
+    }
+    66% {
+        transform: scale(0.9); // уменьшаем
+        // opacity: 0.4;
+    }
+}

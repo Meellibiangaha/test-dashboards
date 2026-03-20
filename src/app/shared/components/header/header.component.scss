@@ -1,0 +1,28 @@
+:host {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 24px;
+}
+.logo {
+    font-size: 36px;
+    line-height: 140%;
+    color: #151d48;
+    font-weight: 600;
+}
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 21px;
+}

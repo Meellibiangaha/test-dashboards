@@ -1,0 +1,23 @@
+:host {
+    padding: 8px 12px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+        background-color: #5d5fef;
+        color: #ffffff;
+    }
+
+    &.active-tab {
+        background-color: #5d5fef;
+        color: #ffffff;
+    }
+}
+.icon {
+}
+svg {
+}
