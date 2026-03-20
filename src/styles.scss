@@ -18,6 +18,11 @@ body {
     min-width: 1280px;
 }
 
+body {
+    background: #101829;
+    color: #fff;
+}
+
 h1,
 h2,
 h3,
@@ -26,22 +31,17 @@ h5 {
     margin: 0;
 }
 
-/* Для всей страницы */
+// Кастомный скроллбар
 ::-webkit-scrollbar {
-    width: 10px; /* ширина для вертикального скролла */
-    height: 10px; /* высота для горизонтального скролла */
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* цвет дорожки */
-    border-radius: 10px;
+    background: #1a1f2e;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; /* цвет ползунка */
+    background: linear-gradient(105deg, #0075ff, #1a1f37);
     border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555; /* цвет при наведении */
 }

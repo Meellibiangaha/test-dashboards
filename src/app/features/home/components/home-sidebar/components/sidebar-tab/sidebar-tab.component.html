@@ -1,2 +1,6 @@
-<div class="icon" [innerHTML]="tab().img | safeInner"></div>
-<div>{{ tab().name }}</div>
+<div class="sidebar-tab" [class.active-tab]="isActive()">
+    <div class="icon">
+        <img [src]="iconPath()" alt="" />
+    </div>
+    <div>{{ tab().name }}</div>
+</div>

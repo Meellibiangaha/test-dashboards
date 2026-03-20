@@ -5,6 +5,6 @@
 
 <div class="tabs">
     @for (tab of tabs(); track $index) {
-        <app-sidebar-tab [class.active-tab]="activeTabIndex() === $index" [tab]="tab" (click)="changeTab($index)" />
+        <app-sidebar-tab [isActive]="activeTabIndex() === $index" [tab]="tab" (click)="changeTab($index)" />
     }
 </div>

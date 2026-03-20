@@ -1,4 +1,4 @@
 export type TabModel = {
     name: string;
-    img: string;
+    icon: string;
 };
