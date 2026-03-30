@@ -91,9 +91,74 @@ export const cardChartOptions1: EChartsOption = {
     ],
 };
 
+export const pie: EChartsOption = {
+    backgroundColor: 'transparent',
+    title: {
+        text: 'Доля Стран покупающих фигурки с Колумбиной',
+        left: 'center',
+        top: 0,
+        textStyle: {
+            color: '#535ae4',
+        },
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: (params: any) => {
+            return `${params.marker} ${params.name}: ${params.value}млн$`;
+        },
+    },
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1],
+        },
+    },
+    series: [
+        {
+            name: 'Оценка в млн$',
+            type: 'pie',
+            radius: '80%',
+            center: ['50%', '55%'],
+            data: [
+                { value: 335, name: 'Япония' },
+                { value: 400, name: 'Китай' },
+                { value: 274, name: 'Америка' },
+                { value: 310, name: 'Корея' },
+                { value: 235, name: 'Страны СНГ' },
+            ].sort(function (a, b) {
+                return a.value - b.value;
+            }),
+            roseType: 'radius',
+            label: {
+                color: 'rgba(227, 229, 255, 0.9)',
+            },
+            labelLine: {
+                lineStyle: {
+                    color: 'rgba(118, 122, 180, 0.9)',
+                },
+                smooth: 0.2,
+                length: 10,
+                length2: 25,
+            },
+            itemStyle: {
+                color: '#0075FF',
+                shadowBlur: 200,
+                shadowColor: 'rgba(100, 3, 180, 0.7)',
+            },
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+                return Math.random() * 200;
+            },
+        },
+    ],
+};
+
 export const defaultChartOptions: EChartsOption = {
     title: {
-        text: 'График продаж порно с Колумбиной',
+        text: 'График продаж фигурок с Колумбиной',
     },
     tooltip: {},
     xAxis: {

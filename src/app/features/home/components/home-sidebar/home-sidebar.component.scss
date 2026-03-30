@@ -4,6 +4,11 @@
     flex-direction: column;
 
     min-width: 264px;
+    border-right: 1px solid #181d5a;
+    box-shadow:
+        0 0 2px #181d5a,
+        0 0 6px #181d5a,
+        0 0 8px #181d5a;
 }
 .logo {
     padding-bottom: 30px;

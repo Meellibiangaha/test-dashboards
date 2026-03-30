@@ -4,9 +4,16 @@
 
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    height: 100vh; // Вся высота окна
 }
-.main-text {
-    line-height: 2;
+.main {
+    &-text {
+        line-height: 2;
+    }
+    &-chart {
+      height: 500px;
+    }
 }
 .card-list {
     width: 100%;
@@ -16,6 +23,17 @@
     justify-content: space-around;
     gap: 32px;
     padding-bottom: 100px;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &--scroll {
+        flex: 1;
+        padding: 12px 20px;
+        overflow-y: auto;
+    }
 }
 
 // Стили для обертки графика

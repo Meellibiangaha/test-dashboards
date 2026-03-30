@@ -9,7 +9,7 @@ import { LoaderComponent } from '@app/shared/components/loader/loader.component'
 import { HomeSidebarComponent } from './components/home-sidebar/home-sidebar.component';
 import { NGX_ECHARTS_CONFIG, NgxEchartsModule } from 'ngx-echarts';
 import { EChartsOption } from 'echarts';
-import { cardChartOptions1, defaultChartOptions } from '@app/core/configs/charts-options';
+import { cardChartOptions1, defaultChartOptions, pie } from '@app/core/configs/charts-options';
 import { HeaderComponent } from '@app/shared/components/header/header.component';
 
 @Component({
@@ -34,9 +34,10 @@ export class Home implements OnInit {
     public readonly cardListFiltered = computed<HomeCardModel[]>(() => this.cardList().filter((card) => card.id < 8));
     public readonly loading = signal(false);
     // Здесь будут опции для графика
-    public readonly chartOptions = signal<EChartsOption>(defaultChartOptions);
+    public readonly chartOptions = signal<EChartsOption>(pie);
 
     public readonly cardChartOptions = signal(cardChartOptions1);
+
 
     public ngOnInit(): void {
         this.loading.set(true);

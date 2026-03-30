@@ -1,25 +1,28 @@
 <app-home-sidebar />
 
-<div>
+<div class="content">
     <app-header />
-    <div echarts [options]="chartOptions()" class="chart-container"></div>
+    <div class="content--scroll">
+        <div class="main-chart" echarts [options]="chartOptions()" ></div>
 
-    @if(!loading()){
-    <div class="card-list">
-        @for (card of cardListFiltered(); track card.id) {
-        <app-home-card [card]="card">
-            <div graph class="chart-wrapper">
-                <div echarts [options]="cardChartOptions()" class="chart-container"></div>
+        @if (!loading()) {
+            <div class="card-list">
+                @for (card of cardListFiltered(); track card.id) {
+                    <app-home-card [card]="card">
+                        <div graph class="chart-wrapper">
+                            <div echarts [options]="cardChartOptions()" class="chart-container"></div>
+                        </div>
+                    </app-home-card>
+                }
             </div>
-        </app-home-card>
         }
-    </div>
-    } @if(loading()) {
-    <app-loader />
-    }
+        @if (loading()) {
+            <app-loader />
+        }
 
-    <div>
-        <div class="main-text">{{ homeMainText() }}</div>
+        <div>
+            <div class="main-text">{{ homeMainText() }}</div>
+        </div>
     </div>
 
     <!-- @defer () {
