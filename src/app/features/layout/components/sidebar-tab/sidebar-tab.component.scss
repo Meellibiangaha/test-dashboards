@@ -20,6 +20,16 @@
             background-color: #0075ff;
         }
     }
+
+    &.disabled {
+        pointer-events: none;
+        cursor: default;
+        color: #a1a1a1;
+
+        &:hover {
+            background: transparent;
+        }
+    }
 }
 .icon {
     display: flex;
@@ -28,4 +38,9 @@
     padding: 7px;
     border-radius: 12px;
     background-color: #1a1f37;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
 }

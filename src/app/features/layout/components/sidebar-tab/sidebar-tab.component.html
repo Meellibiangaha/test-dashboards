@@ -1,0 +1,14 @@
+<a
+    #rla="routerLinkActive"
+    class="sidebar-tab"
+    [class.disabled]="tab().disabled"
+    routerLinkActive
+    routerLinkActive="active-tab"
+    [routerLinkActiveOptions]="tab().routerOptions || { exact: false }"
+    [routerLink]="[tab().link]"
+>
+    <div class="icon">
+        <img [src]="iconPath(rla.isActive)" alt="" />
+    </div>
+    <div>{{ tab().name }}</div>
+</a>

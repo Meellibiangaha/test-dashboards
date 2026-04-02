@@ -1,4 +1,4 @@
-<div>
+<div class="layout">
     <div class="sidebar">
         <div class="logo">
             <img src="/assets/svg/logo/logo.svg" alt="Logo" />
@@ -7,11 +7,14 @@
 
         <div class="tabs">
             @for (tab of tabs(); track $index) {
-                <app-sidebar-tab [isActive]="activeTabIndex() === $index" [tab]="tab" (click)="changeTab($index)" />
+                <app-sidebar-tab  [tab]="tab" />
             }
         </div>
     </div>
     <div class="content">
-        <router-outlet />
+        <div class="header"></div>
+        <div class="main">
+            <router-outlet />
+        </div>
     </div>
 </div>
