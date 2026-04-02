@@ -1,9 +1,10 @@
 import { Component, input } from '@angular/core';
 import { TabModel } from '../../models/tab.model';
+import { RouterLink } from "@angular/router";
 
 @Component({
     selector: 'app-sidebar-tab',
-    imports: [],
+    imports: [RouterLink],
     templateUrl: './sidebar-tab.component.html',
     styleUrl: './sidebar-tab.component.scss',
 })

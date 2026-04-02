@@ -6,7 +6,6 @@ import { tap } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NOCK_MAIN_TEXT } from './mock/home-main-text.mock';
 import { LoaderComponent } from '@app/shared/components/loader/loader.component';
-import { HomeSidebarComponent } from './components/home-sidebar/home-sidebar.component';
 import { NGX_ECHARTS_CONFIG, NgxEchartsModule } from 'ngx-echarts';
 import { EChartsOption } from 'echarts';
 import { cardChartOptions1, defaultChartOptions, pie } from '@app/core/configs/charts-options';
@@ -14,7 +13,7 @@ import { HeaderComponent } from '@app/shared/components/header/header.component'
 
 @Component({
     selector: 'app-home',
-    imports: [HomeSidebarComponent, HeaderComponent, HomeCardComponent, LoaderComponent, NgxEchartsModule],
+    imports: [ HeaderComponent, HomeCardComponent, LoaderComponent, NgxEchartsModule],
     templateUrl: './home.html',
     styleUrl: './home.scss',
     providers: [

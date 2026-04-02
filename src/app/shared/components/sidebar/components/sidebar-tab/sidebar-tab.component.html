@@ -1,4 +1,4 @@
-<div class="sidebar-tab" [class.active-tab]="isActive()">
+<div class="sidebar-tab" [class.active-tab]="isActive()" [routerLink]="[tab().link]">
     <div class="icon">
         <img [src]="iconPath()" alt="" />
     </div>

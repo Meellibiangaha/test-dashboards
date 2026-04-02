@@ -4,12 +4,12 @@ import { TABS_MOCK } from './mock/tabs.mock';
 import { TabModel } from './models/tab.model';
 
 @Component({
-    selector: 'app-home-sidebar',
+    selector: 'app-sidebar',
     imports: [SidebarTabComponent],
-    templateUrl: './home-sidebar.component.html',
-    styleUrl: './home-sidebar.component.scss',
+    templateUrl: './sidebar.component.html',
+    styleUrl: './sidebar.component.scss',
 })
-export class HomeSidebarComponent {
+export class SidebarComponent {
     public tabs = signal<TabModel[]>(TABS_MOCK);
 
     public activeTabIndex = signal<number | null>(0);
