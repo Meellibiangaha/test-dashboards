@@ -1,0 +1,17 @@
+<div>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="/assets/svg/logo/logo.svg" alt="Logo" />
+            <div>Drochilo</div>
+        </div>
+
+        <div class="tabs">
+            @for (tab of tabs(); track $index) {
+                <app-sidebar-tab [isActive]="activeTabIndex() === $index" [tab]="tab" (click)="changeTab($index)" />
+            }
+        </div>
+    </div>
+    <div class="content">
+        <router-outlet />
+    </div>
+</div>
