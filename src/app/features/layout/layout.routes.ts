@@ -9,7 +9,7 @@ export const routes: Routes = [
             {
                 path: '',
                 title: 'Дашборды',
-                loadComponent: () => import('../home/home').then((c) => c.Home),
+                loadComponent: () => import('../dashboard/dashboard').then((c) => c.Dashboard),
             },
             {
                 path: 'tables',
