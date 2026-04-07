@@ -1,16 +1,12 @@
-<div>
-    <div class="content--scroll">
-        <app-dashboard-graph [graphData]="chartOptions()" />
+<div class="content--scroll">
+    <app-dashboard-graph [graphData]="chartOptions()" />
 
-        @if (!loading()) {
-            <div class="card-list">
-                <div graph class="chart-wrapper">
-                    <div echarts [options]="cardChartOptions()" class="chart-container"></div>
-                </div>
-            </div>
-        }
-        @if (loading()) {
-            <app-loader />
-        }
-    </div>
+    @if (!loading()) {
+        <div class="card-list">
+            <app-dashboard-card-list [dashboardList]="dashboardList()" />
+        </div>
+    }
+    @if (loading()) {
+        <app-loader />
+    }
 </div>

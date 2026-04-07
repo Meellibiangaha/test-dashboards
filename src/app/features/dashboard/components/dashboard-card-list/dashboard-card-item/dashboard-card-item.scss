@@ -1,0 +1,26 @@
+// Контейнеру сетки нужно задать высоту, иначе он схлопнется
+.grid-stack-container {
+  height: 100vh; // Или любую другую подходящую вам высоту, например, 800px
+  width: 100%;
+  background: #fafad2; // Необязательный цвет фона сетки
+}
+
+// Стиль для содержимого каждого виджета
+.grid-stack-item-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; // Чтобы содержимое не вылезало за границы
+  padding: 10px;    // Внутренний отступ
+
+  // Стили для div, который будет содержать график ECharts
+  > div {
+    width: 100%;
+    height: 100%;
+  }
+}
+.drag-handle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

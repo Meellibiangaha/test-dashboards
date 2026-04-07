@@ -1,4 +1,7 @@
 import { EChartsOption } from 'echarts';
+import * as echarts from 'echarts';
+
+import { randomData } from '../helpers/random-data.helper';
 
 export const cardChartOptions1: EChartsOption = {
     title: {
@@ -170,6 +173,72 @@ export const defaultChartOptions: EChartsOption = {
             name: 'Продажи',
             type: 'line', // Тип графика: bar, line, pie и т.д.
             data: [1120, 2200, 3600, 3000, 3402, 1565, 2400],
+        },
+    ],
+};
+
+export const largeAreaScaleOptions: EChartsOption = {
+    tooltip: {
+        trigger: 'axis',
+        position: function (pt: any[]) {
+            return [pt[0], '10%'];
+        },
+    },
+    title: {
+        left: 'center',
+        text: 'Large Area Chart',
+    },
+    toolbox: {
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none',
+            },
+            restore: {},
+            saveAsImage: {},
+        },
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: randomData(),
+    },
+    yAxis: {
+        type: 'value',
+        boundaryGap: [0, '100%'],
+    },
+    dataZoom: [
+        {
+            type: 'inside',
+            start: 0,
+            end: 10,
+        },
+        {
+            start: 0,
+            end: 10,
+        },
+    ],
+    series: [
+        {
+            name: 'Fake Data',
+            type: 'line',
+            symbol: 'none',
+            sampling: 'lttb',
+            itemStyle: {
+                color: 'rgb(255, 70, 131)',
+            },
+            areaStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                        offset: 0,
+                        color: 'rgb(255, 158, 68)',
+                    },
+                    {
+                        offset: 1,
+                        color: 'rgb(255, 70, 131)',
+                    },
+                ]),
+            },
+            data: randomData(),
         },
     ],
 };

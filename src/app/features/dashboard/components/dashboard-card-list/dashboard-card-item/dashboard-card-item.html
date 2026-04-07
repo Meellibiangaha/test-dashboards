@@ -1,1 +1,8 @@
-<p>dashboard-card-item works!</p>
+<div class="card-widget">
+    <!-- ТОЛЬКО эту область можно будет перетаскивать -->
+    <div class="drag-handle">Заголовок графика</div>
+
+    <!-- Область с графиком НЕ будет перетаскиваться -->
+
+    <div echarts [options]="dashboard()" class="chart-container"></div>
+</div>

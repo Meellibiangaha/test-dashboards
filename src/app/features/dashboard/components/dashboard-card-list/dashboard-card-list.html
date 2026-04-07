@@ -1,1 +1,15 @@
-<p>dashboard-card-list works!</p>
+<gridstack [options]="gridOptions" (changeCB)="onChange($event)" class="grid-stack-container">
+    @for (widget of widgets(); track identify($index, widget)) {
+        <gridstack-item [options]="widget">
+            <app-dashboard-card-item
+                [dashboard]="widget.chartOptions"
+                [widgetId]="widget.id"
+
+            />
+        </gridstack-item>
+    }
+
+    @if (!widgets().length) {
+        <div empty-content>Нет виджетов. Добавьте новый график.</div>
+    }
+</gridstack>
