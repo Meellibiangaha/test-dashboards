@@ -20,7 +20,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
     # Разрешить пушить образы в GitHub Container Registry
-    permisions:
+    permissions:
         contents: read
         packages: write
 
