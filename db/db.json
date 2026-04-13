@@ -1,0 +1,10 @@
+{
+    "users": [
+        { "id": 1, "name": "Антон", "role": "devops" },
+        { "id": 2, "name": "Максим", "role": "frontend" }
+    ],
+    "tasks": [
+        { "id": 1, "title": "Выучить Docker", "completed": true },
+        { "id": 2, "title": "Настроить CI/CD", "completed": false }
+    ]
+}

@@ -1,1 +1,8 @@
-<p>tables works!</p>
+<div class="udalit-wrapper">
+    @for (table of tableList(); track $index) {
+        <div class="udalit-item">
+            <div>Table id: {{ table.id }}</div>
+            <div>price: {{ table.price }} {{ table.currency ?? null | currency }}</div>
+        </div>
+    }
+</div>

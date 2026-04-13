@@ -1,4 +1,4 @@
-export const randomData = () => {
+export const randomData = (): number[] => {
     const oneDay = 24 * 3600 * 1000;
     let base = +new Date(1968, 9, 3);
     let date = [];
