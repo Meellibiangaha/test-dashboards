@@ -9,7 +9,8 @@
         "test": "ng test",
         "lint": "ng lint",
         "lint:fix": "ng lint --fix",
-        "prettier": "npm run prettier",
+        "prettier": "prettier --write .",
+        "prettier:check": "prettier --check .",
         "format:check": "prettier --check .",
         "format:write": "prettier --write ."
     },
