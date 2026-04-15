@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, input } from '@angular/core';
 import { EChartsOption } from 'echarts';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import * as echarts from 'echarts';
@@ -12,10 +12,8 @@ import * as echarts from 'echarts';
 export class DashboardCardItem implements AfterViewInit {
     public dashboard = input.required<EChartsOption>();
     public widgetId = input.required<string>();
-
+    public elRef = inject(ElementRef);
     private chartInstance: echarts.ECharts | null = null;
-
-    constructor(private elRef: ElementRef) {}
 
     ngAfterViewInit() {
         this.initChart();

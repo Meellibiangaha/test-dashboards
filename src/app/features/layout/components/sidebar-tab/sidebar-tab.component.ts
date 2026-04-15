@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { TabModel } from '../../models/tab.model';
-import { isActive, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
     selector: 'app-sidebar-tab',

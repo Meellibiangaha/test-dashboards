@@ -31,6 +31,13 @@ module.exports = defineConfig([
                     style: 'kebab-case',
                 },
             ],
+            '@typescript-eslint/no-explicit-any': [
+                'warn',
+                {
+                    fixToUnknown: false,
+                    ignoreRestArgs: false,
+                },
+            ],
         },
     },
     {
