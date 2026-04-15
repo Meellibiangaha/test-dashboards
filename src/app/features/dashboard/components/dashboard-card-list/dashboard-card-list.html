@@ -1,11 +1,7 @@
 <gridstack [options]="gridOptions" (changeCB)="onChange($event)" class="grid-stack-container">
     @for (widget of widgets(); track identify($index, widget)) {
         <gridstack-item [options]="widget">
-            <app-dashboard-card-item
-                [dashboard]="widget.chartOptions"
-                [widgetId]="widget.id"
-
-            />
+            <app-dashboard-card-item [dashboard]="widget.chartOptions" [widgetId]="widget.id" />
         </gridstack-item>
     }
 

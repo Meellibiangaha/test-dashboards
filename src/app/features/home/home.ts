@@ -13,7 +13,7 @@ import { HeaderComponent } from '@app/shared/components/header/header.component'
 
 @Component({
     selector: 'app-home',
-    imports: [ HeaderComponent, HomeCardComponent, LoaderComponent, NgxEchartsModule],
+    imports: [HeaderComponent, HomeCardComponent, LoaderComponent, NgxEchartsModule],
     templateUrl: './home.html',
     styleUrl: './home.scss',
     providers: [
@@ -36,7 +36,6 @@ export class Home implements OnInit {
     public readonly chartOptions = signal<EChartsOption>(pie);
 
     public readonly cardChartOptions = signal(cardChartOptions1);
-
 
     public ngOnInit(): void {
         this.loading.set(true);

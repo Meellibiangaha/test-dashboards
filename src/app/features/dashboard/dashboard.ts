@@ -25,5 +25,9 @@ export class Dashboard {
     public readonly chartOptions = signal<EChartsOption>(pie);
 
     public readonly cardChartOptions = signal(cardChartOptions1);
-    public readonly dashboardList = signal<EChartsOption[]>([largeAreaScaleOptions, cardChartOptions1, defaultChartOptions]);
+    public readonly dashboardList = signal<EChartsOption[]>([
+        largeAreaScaleOptions,
+        cardChartOptions1,
+        defaultChartOptions,
+    ]);
 }

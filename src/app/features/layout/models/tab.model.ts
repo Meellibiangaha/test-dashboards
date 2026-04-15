@@ -1,4 +1,4 @@
-import { IsActiveMatchOptions } from "@angular/router";
+import { IsActiveMatchOptions } from '@angular/router';
 
 export type TabModel = {
     name: string;

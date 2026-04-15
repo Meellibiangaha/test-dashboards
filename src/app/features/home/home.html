@@ -1,9 +1,7 @@
-
-
 <div class="content">
     <app-header />
     <div class="content--scroll">
-        <div class="main-chart" echarts [options]="chartOptions()" ></div>
+        <div class="main-chart" echarts [options]="chartOptions()"></div>
 
         @if (!loading()) {
             <div class="card-list">
