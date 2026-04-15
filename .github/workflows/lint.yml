@@ -28,6 +28,7 @@ jobs:
 
   eslint:
     name: Run ESLint
+    needs: [prettier]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
