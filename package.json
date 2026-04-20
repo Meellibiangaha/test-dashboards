@@ -10,9 +10,7 @@
         "lint": "ng lint",
         "lint:fix": "ng lint --fix",
         "prettier": "prettier --write .",
-        "prettier:check": "prettier --check .",
-        "format:check": "prettier --check .",
-        "format:write": "prettier --write ."
+        "prettier:check": "prettier --check ."
     },
     "private": true,
     "packageManager": "npm@11.11.0",
@@ -30,6 +28,9 @@
         "tslib": "^2.3.0"
     },
     "devDependencies": {
+        "@angular-eslint/eslint-plugin": "^21.3.1",
+        "@angular-eslint/eslint-plugin-template": "^21.3.1",
+        "@angular-eslint/template-parser": "^21.3.1",
         "@angular/build": "^21.2.2",
         "@angular/cli": "^21.2.2",
         "@angular/compiler-cli": "^21.2.0",
