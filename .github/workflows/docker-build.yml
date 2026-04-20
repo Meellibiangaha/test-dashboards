@@ -18,10 +18,11 @@ jobs:
   lint:
     uses: ./.github/workflows/lint.yml
   test:
+    needs: lint
     uses: ./.github/workflows/test.yml
 
   build:
-    needs: lint
+    needs: test
     runs-on: ubuntu-latest
     # Разрешить пушить образы в GitHub Container Registry
     permissions:
