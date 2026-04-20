@@ -15,7 +15,11 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
+  lint:
+    uses: ./.github/workflows/lint.yml
+
   build:
+    needs: lint
     runs-on: ubuntu-latest
     # Разрешить пушить образы в GitHub Container Registry
     permissions:
