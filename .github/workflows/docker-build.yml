@@ -16,7 +16,7 @@ env:
 
 jobs:
   lint:
-    uses: ./.github/workflows/lint.yml
+    uses: ./lint.yml
 
   build:
     needs: lint
