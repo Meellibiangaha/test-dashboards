@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { TabModel } from '../../models/tab.model';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -6,6 +6,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     selector: 'app-sidebar-tab',
     imports: [RouterLink, RouterLinkActive],
     templateUrl: './sidebar-tab.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './sidebar-tab.component.scss',
 })
 export class SidebarTabComponent {

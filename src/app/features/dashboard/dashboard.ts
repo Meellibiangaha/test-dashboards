@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { pie, cardChartOptions1, defaultChartOptions, largeAreaScaleOptions } from '@app/core/configs/charts-options';
-import { LoaderComponent } from '@app/shared/components/loader/loader.component';
 import { EChartsOption } from 'echarts';
 import { NGX_ECHARTS_CONFIG, NgxEchartsModule } from 'ngx-echarts';
 import { DashboardGraph } from './components/dashboard-graph/dashboard-graph';
 import { DashboardCardList } from './components/dashboard-card-list/dashboard-card-list';
+import { Test } from '@app/core/services/test';
+import { LoaderComponent } from '@app/shared/components/loader/loader.component';
 
 @Component({
     selector: 'app-dashboard',
@@ -18,7 +19,11 @@ import { DashboardCardList } from './components/dashboard-card-list/dashboard-ca
         },
     ],
 })
-export class Dashboard {
+export class Dashboard implements OnInit {
+    private testService = inject(Test);
+    ngOnInit(): void {
+        console.log(this.testService.testData);
+    }
     public readonly loading = signal(false);
 
     // Здесь будут опции для графика

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, inject, input, OnDestroy, OnInit, viewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, input, OnDestroy, OnInit, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { Echart } from '@app/core/services/echart';
 import { EChartsOption } from 'echarts';
 import { NgxEchartsDirective } from 'ngx-echarts';
@@ -7,6 +7,7 @@ import { NgxEchartsDirective } from 'ngx-echarts';
     selector: 'app-dashboard-graph',
     imports: [NgxEchartsDirective],
     templateUrl: './dashboard-graph.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './dashboard-graph.scss',
 })
 export class DashboardGraph implements OnInit, OnDestroy {

@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject, OnInit } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserActivity } from './core/services/user-activity';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -7,6 +7,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     selector: 'app-root',
     imports: [RouterOutlet],
     templateUrl: './app.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './app.scss',
 })
 export class App implements OnInit {

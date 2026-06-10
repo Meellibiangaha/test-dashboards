@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, inject, input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, input, ChangeDetectionStrategy } from '@angular/core';
 import { EChartsOption } from 'echarts';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import * as echarts from 'echarts';
@@ -7,6 +7,7 @@ import * as echarts from 'echarts';
     selector: 'app-dashboard-card-item',
     imports: [NgxEchartsDirective],
     templateUrl: './dashboard-card-item.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './dashboard-card-item.scss',
 })
 export class DashboardCardItem implements AfterViewInit {

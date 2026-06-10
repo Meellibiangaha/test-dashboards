@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
     selector: 'app-breadcrumbs',
     imports: [],
     templateUrl: './breadcrumbs.html',
+
     styleUrl: './breadcrumbs.scss',
 })
 export class Breadcrumbs {}
