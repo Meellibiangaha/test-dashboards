@@ -1,4 +1,4 @@
-import { Component, input, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
+import { Component, input, OnInit, signal } from '@angular/core';
 import { GridStackOptions } from 'gridstack';
 import { GridstackComponent, GridstackItemComponent, nodesCB } from 'gridstack/dist/angular';
 import { DashboardCardItem } from './dashboard-card-item/dashboard-card-item';
@@ -9,7 +9,7 @@ import { DashboardWidget } from './models/dashboard.model';
     selector: 'app-dashboard-card-list',
     imports: [GridstackComponent, GridstackItemComponent, DashboardCardItem],
     templateUrl: './dashboard-card-list.html',
-    changeDetection: ChangeDetectionStrategy.Eager,
+
     styleUrl: './dashboard-card-list.scss',
 })
 export class DashboardCardList implements OnInit {

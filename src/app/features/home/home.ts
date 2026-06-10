@@ -1,4 +1,4 @@
-import { Component, computed, DestroyRef, inject, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
+import { Component, computed, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { HomeCardComponent } from '@app/features/home/components/home-card/home-card.component';
 import { HomeCardModel } from './models/home-card.model';
 import { HomeService } from '@app/features/home/services/home';
@@ -16,7 +16,6 @@ import { HeaderComponent } from '@app/shared/components/header/header.component'
     imports: [HeaderComponent, HomeCardComponent, LoaderComponent, NgxEchartsModule],
     templateUrl: './home.html',
     styleUrl: './home.scss',
-    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [
         {
             provide: NGX_ECHARTS_CONFIG,
